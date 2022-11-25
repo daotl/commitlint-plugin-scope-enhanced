@@ -7,5 +7,5 @@ export const tsup: Options = {
   splitting: false,
   clean: true,
   dts: true,
-  format: ['cjs', 'esm'],
+  format: ['cjs'],
 }

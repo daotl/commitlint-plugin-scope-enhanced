@@ -1,39 +1,27 @@
-# ts-lib-starter
+# commitlint-plugin-scope-enhanced
 
-TypeScript Library Starter for DAOT projects
+## Installation
+
+```sh
+npm install -D commitlint-config-scope-enhanced
+```
 
 ## Usage
 
-Modify [package.json]().
-
-Commit changes with [Commitizen](https://commitizen.github.io/cz-cli/):
-```shell
-npx cz
+```js
+module.exports = {
+  ...,
+  plugins: ["scope-enhanced"],
+  rules: {
+    'scope-enum-enhanced': [2, 'always', ['@scope/package1'， '@scope/package2']],
+  }
+}
 ```
 
-Or still use `git commit` and follow [the Conventional Commits spec](https://www.conventionalcommits.org/en/v1.0.0/#summary), your commits will be linted before accepted.
+## Reference
 
-To run `Jest` test:
-```shell
-npm run test
-```
+https://stackoverflow.com/a/69362848/4923728
 
-To lint with `ESLint`:
-```shell
-npm run lint
-```
+## License
 
-To build with `tsup`:
-```shell
-npm run build
-```
-
-To publish to npm:
-```shell
-npm run pub
-```
-
-To debug with `ts-node`:
-```shell
-ts-node -r tsconfig-paths/register src/index.ts
-```
+[MIT](LICENSE)
